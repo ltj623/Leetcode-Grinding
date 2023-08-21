@@ -4,7 +4,6 @@ class Solution:
         h_index = 0
     
         for i, citation in enumerate(citations, start=1):
-            print(citation, i)
             if citation >= i:
                 h_index = i  # Update the h-index if condition is met
             else:
