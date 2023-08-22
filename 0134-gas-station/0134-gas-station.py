@@ -9,4 +9,3 @@ class Solution:
                 count = 0
                 res = i + 1
         return res
-        
