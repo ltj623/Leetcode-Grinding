@@ -13,7 +13,7 @@ class Solution:
 
         for r, c in enumerate(s):
             window[c] = window.get(c, 0) + 1
-
+            # if there's more chars than needed, just store it without adding have
             if c in cnt_t and window[c] == cnt_t[c]:
                 have += 1
             
