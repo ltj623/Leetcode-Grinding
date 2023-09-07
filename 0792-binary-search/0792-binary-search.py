@@ -4,9 +4,9 @@ class Solution:
         while l < r:
             mid = l + (r-l)//2
             if nums[mid] < target:
-                l += 1
+                l = mid + 1
             elif nums[mid] > target:
-                r -= 1
+                r = mid
             else:
                 return mid
         return -1
