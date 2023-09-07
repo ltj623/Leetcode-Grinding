@@ -3,7 +3,6 @@ class Solution:
         if not s: return True
 
         idx = 0
-
         for c in t:
             if c == s[idx]:
                 idx += 1
