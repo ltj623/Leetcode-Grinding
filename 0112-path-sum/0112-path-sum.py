@@ -6,26 +6,27 @@
 #         self.right = right
 class Solution:
     def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
-        if not root: return False
-        if not root.left and not root.right and root.val == targetSum:
-            return True
-        return self.hasPathSum(root.left, targetSum - root.val) or self.hasPathSum(root.right, targetSum - root.val)
-
-
-        # # BFS
+        # # Recursive
         # if not root: return False
-        # q = deque()
-        # q.append((root, targetSum))
+        # if not root.left and not root.right and root.val == targetSum:
+        #     return True
+        # return self.hasPathSum(root.left, targetSum - root.val) or self.hasPathSum(root.right, targetSum - root.val)
 
-        # while q:
-        #     node, curSum = q.popleft()
-        #     if not node.left and not node.right and curSum == node.val:
-        #         return True
-        #     if node.left:
-        #         q.append((node.left, curSum - node.val))
-        #     if node.right:
-        #         q.append((node.right, curSum - node.val))
-        # return False
+
+        # BFS
+        if not root: return False
+        q = deque()
+        q.append((root, targetSum))
+
+        while q:
+            node, curSum = q.popleft()
+            if not node.left and not node.right and curSum == node.val:
+                return True
+            if node.left:
+                q.append((node.left, curSum - node.val))
+            if node.right:
+                q.append((node.right, curSum - node.val))
+        return False
 
 
 
