@@ -6,13 +6,13 @@
 #         self.right = right
 class Solution:
     def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
+        # BFS
         if not root: return False
         q = deque()
         q.append((root, targetSum))
 
         while q:
             node, curSum = q.popleft()
-            # if not node: continue
             if not node.left and not node.right and curSum == node.val:
                 return True
             if node.left:
@@ -20,6 +20,8 @@ class Solution:
             if node.right:
                 q.append((node.right, curSum - node.val))
         return False
+
+
 
 
         
