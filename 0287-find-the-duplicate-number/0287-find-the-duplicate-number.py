@@ -4,5 +4,4 @@ class Solution:
         for k, v in cnt.items():
             if v > 1:
                 return k
-        return 
         
