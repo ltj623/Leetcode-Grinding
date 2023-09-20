@@ -15,6 +15,7 @@ class Solution:
                 l = mid + 1
             else:
                 ans = mid
+                # this is for the left most position
                 r = mid - 1
         res.append(ans)
 
@@ -27,6 +28,7 @@ class Solution:
                 l = mid + 1
             else:
                 ans = mid
+                # this is for the right most position
                 l = mid + 1
         res.append(ans)
         return res
