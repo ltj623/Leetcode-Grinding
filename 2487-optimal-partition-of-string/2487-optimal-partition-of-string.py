@@ -8,3 +8,4 @@ class Solution:
                 res += 1
             tmp.add(c)
         return res
+        
