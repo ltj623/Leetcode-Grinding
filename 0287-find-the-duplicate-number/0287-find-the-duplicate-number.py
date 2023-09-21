@@ -4,6 +4,7 @@ class Solution:
         for num in nums:
             if freq[num]:
                 return num
-            freq[num] += 1
+            freq[num] = 1
+        
 
         
