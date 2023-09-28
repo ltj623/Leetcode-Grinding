@@ -4,12 +4,10 @@ class Solution:
         stack = [-1]
 
         for i, c in enumerate(s):
-            if c == "(":
+            if c == '(':
                 stack.append(i)
             else:
                 stack.pop()
                 if not stack: stack.append(i)
-                else:
-                    res = max(res, i - stack[-1])
+                res = max(res, i - stack[-1])
         return res
-        
