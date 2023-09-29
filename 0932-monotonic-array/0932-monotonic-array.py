@@ -3,4 +3,5 @@ class Solution:
         if sorted(nums) == nums or sorted(nums, reverse=True) == nums:
             return True
         return False
+
         
