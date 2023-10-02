@@ -6,8 +6,6 @@ class Solution:
             if c == "#":
                 if stack_s: 
                     stack_s.pop()
-                else:
-                    continue
             else:
                 stack_s.append(c)
         print(stack_s)
@@ -15,8 +13,6 @@ class Solution:
             if c == "#":
                 if stack_t:
                     stack_t.pop()
-                else:
-                    continue
             else:
                 stack_t.append(c)
         print(stack_t)
