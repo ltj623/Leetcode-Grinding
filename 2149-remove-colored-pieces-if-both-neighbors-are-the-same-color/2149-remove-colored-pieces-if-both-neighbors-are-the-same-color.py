@@ -1,14 +1,11 @@
 class Solution:
     def winnerOfGame(self, colors: str) -> bool:
         alice, bob = 0, 0
-        l = 0
-        for r in range(len(colors)):
-            if colors[l] != colors[r]:
-                l = r
-            extra = r - l + 1 - 2
-            if extra > 0:
-                if colors[r] == 'A':
+
+        for i in range(1, len(colors)-1):
+            if colors[i-1] == colors[i] == colors[i+1]:
+                if colors[i] == 'A':
                     alice += 1
-                if colors[r] == 'B':
+                if colors[i] == 'B':
                     bob += 1
         return alice > bob
