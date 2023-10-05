@@ -9,9 +9,7 @@ class Solution:
             elif op == "C":
                 if stack: stack.pop()
             elif op == "D":
-                tmp = stack[-1]
-                stack.append(tmp * 2)
-                print(stack)
+                stack.append(stack[-1] * 2)
             else:
                 stack.append(int(op))
         return sum(stack)
