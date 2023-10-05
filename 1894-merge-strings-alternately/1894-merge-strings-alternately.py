@@ -6,10 +6,7 @@ class Solution:
             res += word1[i]
             res += word2[j]
             i += 1; j += 1
-        if i < len(word1):
-            res += word1[i:]
-        else:
-            res += word2[j:]
+        res += word1[i:] if i < len(word1) else word2[j:]
         return res
 
         
