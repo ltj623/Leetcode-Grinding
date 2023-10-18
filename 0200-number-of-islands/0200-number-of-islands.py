@@ -1,10 +1,9 @@
 class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
         rows, cols = len(grid), len(grid[0])
-        visited = set()
 
         def dfs(r,c):
-            if not r in range(rows) or not c in range(cols) or (r,c) in visited or grid[r][c] != "1":
+            if not r in range(rows) or not c in range(cols) or grid[r][c] != "1":
                 return
             
             grid[r][c] = "0"
