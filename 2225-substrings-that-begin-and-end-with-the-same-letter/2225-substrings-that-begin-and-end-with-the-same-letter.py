@@ -3,11 +3,7 @@ class Solution:
         h = {}
         res = 0
         for c in s:
-            if c in h:
-                res += h[c]
-                h[c] += 1
-            else:
-                h[c] = 1
-        return res + len(s)
-
+            h[c] = h.get(c,0) + 1
+            res += h[c]
+        return res
         
