@@ -16,11 +16,11 @@ class Solution:
 
         def backtrack(combination, next_digits):
             if len(next_digits) == 0:
-                output.append(combination)
+                res.append(combination)
                 return
             for letter in phone_map[next_digits[0]]:
                 backtrack(combination + letter, next_digits[1:])
 
-        output = []
+        res = []
         backtrack("", digits)
-        return output
+        return res
