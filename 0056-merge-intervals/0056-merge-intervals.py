@@ -3,9 +3,9 @@ class Solution:
         intervals.sort(key=lambda x: x[0])
         merged = []
 
-        for i in range(len(intervals)):
-            if not merged or merged[-1][-1] < intervals[i][0]:
-                merged.append(intervals[i])
+        for interval in intervals:
+            if not merged or merged[-1][-1] < interval[0]:
+                merged.append(interval)
             else:
-                merged[-1][-1] = max(merged[-1][-1], intervals[i][-1])
+                merged[-1][-1] = max(merged[-1][-1], interval[-1])
         return merged
